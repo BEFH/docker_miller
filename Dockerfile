@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 RUN mkdir setup
-RUN apt update && apt upgrade -y && apt install -y make gcc autoconf flex 
+RUN apt update && apt upgrade -y && apt install -y make gcc autoconf flex wget 
 RUN cd setup
 RUN wget https://github.com/johnkerl/miller/archive/refs/tags/v5.10.2.tar.gz && \
   tar -xf v5.10.2.tar.gz && \
@@ -16,6 +16,6 @@ RUN apt remove autoconf automake autotools-dev binutils binutils-common \
       libbinutils libc-dev-bin libc6-dev libcc1-0 libfl-dev libfl2 \
       libgcc-8-dev libgomp1 libisl19 libitm1 liblsan0 libmpc3 libmpfr6 \
       libmpx2 libquadmath0 libsigsegv2 libtsan0 libubsan1 linux-libc-dev \
-      manpages-dev && \
+      manpages-dev wget && \
   apt clean
 ENTRYPOINT ["mlr"]
