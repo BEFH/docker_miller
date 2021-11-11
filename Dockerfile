@@ -11,7 +11,7 @@ RUN wget https://github.com/johnkerl/miller/archive/refs/tags/v5.10.2.tar.gz && 
   make install && \
   cd ..
 RUN cd .. && rm -rf setup
-RUN apt remove autoconf automake autotools-dev binutils binutils-common \
+RUN apt remove -y autoconf automake autotools-dev binutils binutils-common \
       binutils-x86-64-linux-gnu cpp cpp-8 gcc gcc-8 libasan5 libatomic1 \
       libbinutils libc-dev-bin libc6-dev libcc1-0 libfl-dev libfl2 \
       libgcc-8-dev libgomp1 libisl19 libitm1 liblsan0 libmpc3 libmpfr6 \
