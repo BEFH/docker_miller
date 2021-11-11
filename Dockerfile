@@ -7,7 +7,7 @@ RUN wget https://github.com/johnkerl/miller/archive/refs/tags/v5.10.2.tar.gz && 
   cd miller-5.10.2/ && \
   ./configure && \
   make && \
-  make check &&
+  make check && \
   make install && \
   cd ..
 RUN cd .. && rm -rf setup
