@@ -4,6 +4,8 @@ This is a repo that contains the code for a docker container with Miller, an alt
 
 The original repository can be found at https://github.com/johnkerl/miller
 
+This branch uses Alpine linux, and there is a problem with times.
+
 ## Installation
 
 To install the container, run the following using docker:
