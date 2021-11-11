@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 RUN mkdir setup
-RUN apt update && apt upgrade -y && apt install -y 
+RUN apt update && apt upgrade -y && apt install -y make gcc autoconf flex 
 RUN cd setup
 RUN wget https://github.com/johnkerl/miller/archive/refs/tags/v5.10.2.tar.gz && \
   tar -xf v5.10.2.tar.gz && \
